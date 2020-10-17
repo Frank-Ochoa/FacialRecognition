@@ -103,7 +103,7 @@ class App extends Component
 		const {inputField} = this.props
 		this.setState({imageURL: inputField})
 
-		fetch('http://localhost:3000/imageurl', {
+		fetch('https://lit-lowlands-59154.herokuapp.com/imageurl', {
 			method: 'POST',
 			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({input: inputField})
@@ -113,7 +113,7 @@ class App extends Component
 			{
 				if (response)
 				{
-					fetch('http://localhost:3000/image', {
+					fetch('https://lit-lowlands-59154.herokuapp.com/image', {
 						method: 'PUT',
 						headers: {'Content-Type': 'application/json'},
 						body: JSON.stringify({id: this.state.user.id})

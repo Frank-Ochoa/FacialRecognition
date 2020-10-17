@@ -11,7 +11,6 @@ export const searchImage = (state = initialStateSearch, action = {}) =>
 	switch (action.type)
 	{
 		case CHANGE_INPUT_FIELD:
-			console.log('PAYLOAD IN REDUCER CHANGE INPUT FIELD', action.payload)
 			return Object.assign({}, state, {inputField: action.payload})
 		default:
 			return state;
